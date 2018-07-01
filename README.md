@@ -3,6 +3,11 @@
 For make ssh login easier, recommend installing [sshpass](https://gist.github.com/arunoda/7790979)
 
 ```bash
+sshpass -p <password> ssh <user>@<address>
+
+**Bosh Client**
+
+```bash
 ubuntu@bosh-stemcell:~$ more .profile 
 if [ -n "$BASH_VERSION" ]; then
   if [ -f "$HOME/.bashrc" ]; then
