@@ -34,7 +34,7 @@ alias uaac='BUNDLE_GEMFILE=/home/tempest-web/tempest/web/vendor/uaac/Gemfile bun
 #source /home/ubuntu/bosh-env.sh
 ```
 
-Bosh environment script
+**Bosh environment script**
 
 ```bash
 ubuntu@bosh-stemcell:~$ more bosh-env.sh
