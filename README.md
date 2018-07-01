@@ -4,6 +4,7 @@ For make ssh login easier, recommend installing [sshpass](https://gist.github.co
 
 ```bash
 sshpass -p <password> ssh <user>@<address>
+```
 
 **Bosh Client**
 
