@@ -1,8 +1,6 @@
-# bosh-profile
+# Bosh .profile configuration for automatic login
 
-For make ssh login easier, recommend installing:
-
-sshpass >> https://gist.github.com/arunoda/7790979
+For make ssh login easier, recommend installing [sshpass](https://gist.github.com/arunoda/7790979)
 
 ```bash
 ubuntu@bosh-stemcell:~$ more .profile 
