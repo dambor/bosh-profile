@@ -1,21 +1,18 @@
 # Bosh .profile configuration for automatic login
 
-For make ssh login easier, recommend installing [sshpass](https://gist.github.com/arunoda/7790979)
+For makeing ssh login easier, recommend installing [sshpass](https://gist.github.com/arunoda/7790979)
 
 ```bash
 sshpass -p <password> ssh <user>@<address>
 ```
 
-**Bosh Client**
-
-```bash
-ubuntu@bosh-stemcell:~$ more .profile 
-
-export BOSH_ENVIRONMENT=pks
-source /home/ubuntu/bosh.profile
-```
-
 **Bosh environment script**
+
+Go to OpsManager API and copy the bosh command line credentials:
+
+```http://<ops_mgr_url>/api/v0/deployed/director/credentials/bosh_commandline_credentials```
+
+Create a ```bosh.profile``` with the command line credentials extracted on the previous step:
 
 ```bash
 ubuntu@bosh-stemcell:~$ more bosh.profile
@@ -23,8 +20,13 @@ ubuntu@bosh-stemcell:~$ more bosh.profile
 alias bosh="BOSH_CLIENT=ops_manager BOSH_CLIENT_SECRET=<client_secret> BOSH_CA_CERT=/<path>/root_ca_certificate BOSH_ENVIRONMENT=<IP> bosh"
 ```
 
-**OpsManager**
+**Bosh Client**
 
-This command line can be extracted from opsman api:
+Edit your ```.profile``` with the following variables:
 
-```api/v0/deployed/director/credentials/bosh_commandline_credentials```
+```bash
+ubuntu@bosh-stemcell:~$ more .profile 
+
+export BOSH_ENVIRONMENT=pks
+source /home/ubuntu/bosh.profile
+```
